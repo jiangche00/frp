@@ -25,20 +25,20 @@ import (
 )
 
 func init() {
-	RegisterCommonFlags(stcpCmd)
+	// RegisterCommonFlags(stcpCmd)
 
-	stcpCmd.PersistentFlags().StringVarP(&proxyName, "proxy_name", "n", "", "proxy name")
-	stcpCmd.PersistentFlags().StringVarP(&role, "role", "", "server", "role")
-	stcpCmd.PersistentFlags().StringVarP(&sk, "sk", "", "", "secret key")
-	stcpCmd.PersistentFlags().StringVarP(&serverName, "server_name", "", "", "server name")
-	stcpCmd.PersistentFlags().StringVarP(&localIP, "local_ip", "i", "127.0.0.1", "local ip")
-	stcpCmd.PersistentFlags().IntVarP(&localPort, "local_port", "l", 0, "local port")
-	stcpCmd.PersistentFlags().StringVarP(&bindAddr, "bind_addr", "", "", "bind addr")
-	stcpCmd.PersistentFlags().IntVarP(&bindPort, "bind_port", "", 0, "bind port")
-	stcpCmd.PersistentFlags().BoolVarP(&useEncryption, "ue", "", false, "use encryption")
-	stcpCmd.PersistentFlags().BoolVarP(&useCompression, "uc", "", false, "use compression")
+	// stcpCmd.PersistentFlags().StringVarP(&proxyName, "proxy_name", "n", "", "proxy name")
+	// stcpCmd.PersistentFlags().StringVarP(&role, "role", "", "server", "role")
+	// stcpCmd.PersistentFlags().StringVarP(&sk, "sk", "", "", "secret key")
+	// stcpCmd.PersistentFlags().StringVarP(&serverName, "server_name", "", "", "server name")
+	// stcpCmd.PersistentFlags().StringVarP(&localIP, "local_ip", "i", "127.0.0.1", "local ip")
+	// stcpCmd.PersistentFlags().IntVarP(&localPort, "local_port", "l", 0, "local port")
+	// stcpCmd.PersistentFlags().StringVarP(&bindAddr, "bind_addr", "", "", "bind addr")
+	// stcpCmd.PersistentFlags().IntVarP(&bindPort, "bind_port", "", 0, "bind port")
+	// stcpCmd.PersistentFlags().BoolVarP(&useEncryption, "ue", "", false, "use encryption")
+	// stcpCmd.PersistentFlags().BoolVarP(&useCompression, "uc", "", false, "use compression")
 
-	rootCmd.AddCommand(stcpCmd)
+	// rootCmd.AddCommand(stcpCmd)
 }
 
 var stcpCmd = &cobra.Command{

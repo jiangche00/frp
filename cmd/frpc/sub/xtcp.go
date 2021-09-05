@@ -25,20 +25,20 @@ import (
 )
 
 func init() {
-	RegisterCommonFlags(xtcpCmd)
+	// RegisterCommonFlags(xtcpCmd)
 
-	xtcpCmd.PersistentFlags().StringVarP(&proxyName, "proxy_name", "n", "", "proxy name")
-	xtcpCmd.PersistentFlags().StringVarP(&role, "role", "", "server", "role")
-	xtcpCmd.PersistentFlags().StringVarP(&sk, "sk", "", "", "secret key")
-	xtcpCmd.PersistentFlags().StringVarP(&serverName, "server_name", "", "", "server name")
-	xtcpCmd.PersistentFlags().StringVarP(&localIP, "local_ip", "i", "127.0.0.1", "local ip")
-	xtcpCmd.PersistentFlags().IntVarP(&localPort, "local_port", "l", 0, "local port")
-	xtcpCmd.PersistentFlags().StringVarP(&bindAddr, "bind_addr", "", "", "bind addr")
-	xtcpCmd.PersistentFlags().IntVarP(&bindPort, "bind_port", "", 0, "bind port")
-	xtcpCmd.PersistentFlags().BoolVarP(&useEncryption, "ue", "", false, "use encryption")
-	xtcpCmd.PersistentFlags().BoolVarP(&useCompression, "uc", "", false, "use compression")
+	// xtcpCmd.PersistentFlags().StringVarP(&proxyName, "proxy_name", "n", "", "proxy name")
+	// xtcpCmd.PersistentFlags().StringVarP(&role, "role", "", "server", "role")
+	// xtcpCmd.PersistentFlags().StringVarP(&sk, "sk", "", "", "secret key")
+	// xtcpCmd.PersistentFlags().StringVarP(&serverName, "server_name", "", "", "server name")
+	// xtcpCmd.PersistentFlags().StringVarP(&localIP, "local_ip", "i", "127.0.0.1", "local ip")
+	// xtcpCmd.PersistentFlags().IntVarP(&localPort, "local_port", "l", 0, "local port")
+	// xtcpCmd.PersistentFlags().StringVarP(&bindAddr, "bind_addr", "", "", "bind addr")
+	// xtcpCmd.PersistentFlags().IntVarP(&bindPort, "bind_port", "", 0, "bind port")
+	// xtcpCmd.PersistentFlags().BoolVarP(&useEncryption, "ue", "", false, "use encryption")
+	// xtcpCmd.PersistentFlags().BoolVarP(&useCompression, "uc", "", false, "use compression")
 
-	rootCmd.AddCommand(xtcpCmd)
+	// rootCmd.AddCommand(xtcpCmd)
 }
 
 var xtcpCmd = &cobra.Command{

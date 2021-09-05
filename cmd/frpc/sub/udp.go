@@ -25,16 +25,16 @@ import (
 )
 
 func init() {
-	RegisterCommonFlags(udpCmd)
+	// RegisterCommonFlags(udpCmd)
 
-	udpCmd.PersistentFlags().StringVarP(&proxyName, "proxy_name", "n", "", "proxy name")
-	udpCmd.PersistentFlags().StringVarP(&localIP, "local_ip", "i", "127.0.0.1", "local ip")
-	udpCmd.PersistentFlags().IntVarP(&localPort, "local_port", "l", 0, "local port")
-	udpCmd.PersistentFlags().IntVarP(&remotePort, "remote_port", "r", 0, "remote port")
-	udpCmd.PersistentFlags().BoolVarP(&useEncryption, "ue", "", false, "use encryption")
-	udpCmd.PersistentFlags().BoolVarP(&useCompression, "uc", "", false, "use compression")
+	// udpCmd.PersistentFlags().StringVarP(&proxyName, "proxy_name", "n", "", "proxy name")
+	// udpCmd.PersistentFlags().StringVarP(&localIP, "local_ip", "i", "127.0.0.1", "local ip")
+	// udpCmd.PersistentFlags().IntVarP(&localPort, "local_port", "l", 0, "local port")
+	// udpCmd.PersistentFlags().IntVarP(&remotePort, "remote_port", "r", 0, "remote port")
+	// udpCmd.PersistentFlags().BoolVarP(&useEncryption, "ue", "", false, "use encryption")
+	// udpCmd.PersistentFlags().BoolVarP(&useCompression, "uc", "", false, "use compression")
 
-	rootCmd.AddCommand(udpCmd)
+	// rootCmd.AddCommand(udpCmd)
 }
 
 var udpCmd = &cobra.Command{

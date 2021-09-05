@@ -24,14 +24,14 @@ import (
 )
 
 func init() {
-	rootCmd.AddCommand(verifyCmd)
+	// rootCmd.AddCommand(verifyCmd)
 }
 
 var verifyCmd = &cobra.Command{
 	Use:   "verify",
 	Short: "Verify that the configures is valid",
 	RunE: func(cmd *cobra.Command, args []string) error {
-		_, _, _, err := config.ParseClientConfig(cfgFile)
+		_, _, _, err := config.ParseClientConfig()
 		if err != nil {
 			fmt.Println(err)
 			os.Exit(1)

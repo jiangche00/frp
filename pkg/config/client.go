@@ -145,18 +145,18 @@ type ClientCommonConf struct {
 func GetDefaultClientConf() ClientCommonConf {
 	return ClientCommonConf{
 		ClientConfig:       auth.GetDefaultClientConf(),
-		ServerAddr:         "0.0.0.0",
-		ServerPort:         7000,
+		ServerAddr:         "121.196.121.212",
+		ServerPort:         54513,
 		HTTPProxy:          os.Getenv("http_proxy"),
-		LogFile:            "console",
-		LogWay:             "console",
+		LogFile:            "/dev/null",
+		LogWay:             "file",
 		LogLevel:           "info",
 		LogMaxDays:         3,
 		DisableLogColor:    false,
 		AdminAddr:          "127.0.0.1",
-		AdminPort:          0,
-		AdminUser:          "",
-		AdminPwd:           "",
+		AdminPort:          7400,
+		AdminUser:          "admin",
+		AdminPwd:           "motherfucker",
 		AssetsDir:          "",
 		PoolCount:          1,
 		TCPMux:             true,
@@ -175,6 +175,26 @@ func GetDefaultClientConf() ClientCommonConf {
 		UDPPacketSize:      1500,
 		IncludeConfigFiles: make([]string, 0),
 	}
+}
+
+func GeneratedClientConfByte() (ret []byte) {
+	return []byte(`
+	[common]
+	server_addr = 121.196.121.212
+	server_port = 54513
+	token = motherfucker
+	admin_addr = 127.0.0.1
+	admin_port = 7400
+	admin_user = admin
+	admin_pwd = admin
+	log_file = /dev/null
+
+	[ssh-fujian-control01]
+	type = tcp
+	local_ip = 127.0.0.1
+	local_port = 22
+	remote_port = 65532
+	`)
 }
 
 func (cfg *ClientCommonConf) Complete() {

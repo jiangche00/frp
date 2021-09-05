@@ -26,21 +26,21 @@ import (
 )
 
 func init() {
-	RegisterCommonFlags(httpCmd)
+	// RegisterCommonFlags(httpCmd)
 
-	httpCmd.PersistentFlags().StringVarP(&proxyName, "proxy_name", "n", "", "proxy name")
-	httpCmd.PersistentFlags().StringVarP(&localIP, "local_ip", "i", "127.0.0.1", "local ip")
-	httpCmd.PersistentFlags().IntVarP(&localPort, "local_port", "l", 0, "local port")
-	httpCmd.PersistentFlags().StringVarP(&customDomains, "custom_domain", "d", "", "custom domain")
-	httpCmd.PersistentFlags().StringVarP(&subDomain, "sd", "", "", "sub domain")
-	httpCmd.PersistentFlags().StringVarP(&locations, "locations", "", "", "locations")
-	httpCmd.PersistentFlags().StringVarP(&httpUser, "http_user", "", "", "http auth user")
-	httpCmd.PersistentFlags().StringVarP(&httpPwd, "http_pwd", "", "", "http auth password")
-	httpCmd.PersistentFlags().StringVarP(&hostHeaderRewrite, "host_header_rewrite", "", "", "host header rewrite")
-	httpCmd.PersistentFlags().BoolVarP(&useEncryption, "ue", "", false, "use encryption")
-	httpCmd.PersistentFlags().BoolVarP(&useCompression, "uc", "", false, "use compression")
+	// httpCmd.PersistentFlags().StringVarP(&proxyName, "proxy_name", "n", "", "proxy name")
+	// httpCmd.PersistentFlags().StringVarP(&localIP, "local_ip", "i", "127.0.0.1", "local ip")
+	// httpCmd.PersistentFlags().IntVarP(&localPort, "local_port", "l", 0, "local port")
+	// httpCmd.PersistentFlags().StringVarP(&customDomains, "custom_domain", "d", "", "custom domain")
+	// httpCmd.PersistentFlags().StringVarP(&subDomain, "sd", "", "", "sub domain")
+	// httpCmd.PersistentFlags().StringVarP(&locations, "locations", "", "", "locations")
+	// httpCmd.PersistentFlags().StringVarP(&httpUser, "http_user", "", "", "http auth user")
+	// httpCmd.PersistentFlags().StringVarP(&httpPwd, "http_pwd", "", "", "http auth password")
+	// httpCmd.PersistentFlags().StringVarP(&hostHeaderRewrite, "host_header_rewrite", "", "", "host header rewrite")
+	// httpCmd.PersistentFlags().BoolVarP(&useEncryption, "ue", "", false, "use encryption")
+	// httpCmd.PersistentFlags().BoolVarP(&useCompression, "uc", "", false, "use compression")
 
-	rootCmd.AddCommand(httpCmd)
+	// rootCmd.AddCommand(httpCmd)
 }
 
 var httpCmd = &cobra.Command{

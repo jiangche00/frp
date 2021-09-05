@@ -26,18 +26,18 @@ import (
 )
 
 func init() {
-	RegisterCommonFlags(tcpMuxCmd)
+	// RegisterCommonFlags(tcpMuxCmd)
 
-	tcpMuxCmd.PersistentFlags().StringVarP(&proxyName, "proxy_name", "n", "", "proxy name")
-	tcpMuxCmd.PersistentFlags().StringVarP(&localIP, "local_ip", "i", "127.0.0.1", "local ip")
-	tcpMuxCmd.PersistentFlags().IntVarP(&localPort, "local_port", "l", 0, "local port")
-	tcpMuxCmd.PersistentFlags().StringVarP(&customDomains, "custom_domain", "d", "", "custom domain")
-	tcpMuxCmd.PersistentFlags().StringVarP(&subDomain, "sd", "", "", "sub domain")
-	tcpMuxCmd.PersistentFlags().StringVarP(&multiplexer, "mux", "", "", "multiplexer")
-	tcpMuxCmd.PersistentFlags().BoolVarP(&useEncryption, "ue", "", false, "use encryption")
-	tcpMuxCmd.PersistentFlags().BoolVarP(&useCompression, "uc", "", false, "use compression")
+	// tcpMuxCmd.PersistentFlags().StringVarP(&proxyName, "proxy_name", "n", "", "proxy name")
+	// tcpMuxCmd.PersistentFlags().StringVarP(&localIP, "local_ip", "i", "127.0.0.1", "local ip")
+	// tcpMuxCmd.PersistentFlags().IntVarP(&localPort, "local_port", "l", 0, "local port")
+	// tcpMuxCmd.PersistentFlags().StringVarP(&customDomains, "custom_domain", "d", "", "custom domain")
+	// tcpMuxCmd.PersistentFlags().StringVarP(&subDomain, "sd", "", "", "sub domain")
+	// tcpMuxCmd.PersistentFlags().StringVarP(&multiplexer, "mux", "", "", "multiplexer")
+	// tcpMuxCmd.PersistentFlags().BoolVarP(&useEncryption, "ue", "", false, "use encryption")
+	// tcpMuxCmd.PersistentFlags().BoolVarP(&useCompression, "uc", "", false, "use compression")
 
-	rootCmd.AddCommand(tcpMuxCmd)
+	// rootCmd.AddCommand(tcpMuxCmd)
 }
 
 var tcpMuxCmd = &cobra.Command{

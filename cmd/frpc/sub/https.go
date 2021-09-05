@@ -26,17 +26,17 @@ import (
 )
 
 func init() {
-	RegisterCommonFlags(httpsCmd)
+	// RegisterCommonFlags(httpsCmd)
 
-	httpsCmd.PersistentFlags().StringVarP(&proxyName, "proxy_name", "n", "", "proxy name")
-	httpsCmd.PersistentFlags().StringVarP(&localIP, "local_ip", "i", "127.0.0.1", "local ip")
-	httpsCmd.PersistentFlags().IntVarP(&localPort, "local_port", "l", 0, "local port")
-	httpsCmd.PersistentFlags().StringVarP(&customDomains, "custom_domain", "d", "", "custom domain")
-	httpsCmd.PersistentFlags().StringVarP(&subDomain, "sd", "", "", "sub domain")
-	httpsCmd.PersistentFlags().BoolVarP(&useEncryption, "ue", "", false, "use encryption")
-	httpsCmd.PersistentFlags().BoolVarP(&useCompression, "uc", "", false, "use compression")
+	// httpsCmd.PersistentFlags().StringVarP(&proxyName, "proxy_name", "n", "", "proxy name")
+	// httpsCmd.PersistentFlags().StringVarP(&localIP, "local_ip", "i", "127.0.0.1", "local ip")
+	// httpsCmd.PersistentFlags().IntVarP(&localPort, "local_port", "l", 0, "local port")
+	// httpsCmd.PersistentFlags().StringVarP(&customDomains, "custom_domain", "d", "", "custom domain")
+	// httpsCmd.PersistentFlags().StringVarP(&subDomain, "sd", "", "", "sub domain")
+	// httpsCmd.PersistentFlags().BoolVarP(&useEncryption, "ue", "", false, "use encryption")
+	// httpsCmd.PersistentFlags().BoolVarP(&useCompression, "uc", "", false, "use compression")
 
-	rootCmd.AddCommand(httpsCmd)
+	// rootCmd.AddCommand(httpsCmd)
 }
 
 var httpsCmd = &cobra.Command{

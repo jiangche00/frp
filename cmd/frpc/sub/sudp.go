@@ -25,20 +25,20 @@ import (
 )
 
 func init() {
-	RegisterCommonFlags(sudpCmd)
+	// RegisterCommonFlags(sudpCmd)
 
-	sudpCmd.PersistentFlags().StringVarP(&proxyName, "proxy_name", "n", "", "proxy name")
-	sudpCmd.PersistentFlags().StringVarP(&role, "role", "", "server", "role")
-	sudpCmd.PersistentFlags().StringVarP(&sk, "sk", "", "", "secret key")
-	sudpCmd.PersistentFlags().StringVarP(&serverName, "server_name", "", "", "server name")
-	sudpCmd.PersistentFlags().StringVarP(&localIP, "local_ip", "i", "127.0.0.1", "local ip")
-	sudpCmd.PersistentFlags().IntVarP(&localPort, "local_port", "l", 0, "local port")
-	sudpCmd.PersistentFlags().StringVarP(&bindAddr, "bind_addr", "", "", "bind addr")
-	sudpCmd.PersistentFlags().IntVarP(&bindPort, "bind_port", "", 0, "bind port")
-	sudpCmd.PersistentFlags().BoolVarP(&useEncryption, "ue", "", false, "use encryption")
-	sudpCmd.PersistentFlags().BoolVarP(&useCompression, "uc", "", false, "use compression")
+	// sudpCmd.PersistentFlags().StringVarP(&proxyName, "proxy_name", "n", "", "proxy name")
+	// sudpCmd.PersistentFlags().StringVarP(&role, "role", "", "server", "role")
+	// sudpCmd.PersistentFlags().StringVarP(&sk, "sk", "", "", "secret key")
+	// sudpCmd.PersistentFlags().StringVarP(&serverName, "server_name", "", "", "server name")
+	// sudpCmd.PersistentFlags().StringVarP(&localIP, "local_ip", "i", "127.0.0.1", "local ip")
+	// sudpCmd.PersistentFlags().IntVarP(&localPort, "local_port", "l", 0, "local port")
+	// sudpCmd.PersistentFlags().StringVarP(&bindAddr, "bind_addr", "", "", "bind addr")
+	// sudpCmd.PersistentFlags().IntVarP(&bindPort, "bind_port", "", 0, "bind port")
+	// sudpCmd.PersistentFlags().BoolVarP(&useEncryption, "ue", "", false, "use encryption")
+	// sudpCmd.PersistentFlags().BoolVarP(&useCompression, "uc", "", false, "use compression")
 
-	rootCmd.AddCommand(sudpCmd)
+	// rootCmd.AddCommand(sudpCmd)
 }
 
 var sudpCmd = &cobra.Command{

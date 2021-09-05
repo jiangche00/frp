@@ -28,14 +28,14 @@ import (
 )
 
 func init() {
-	rootCmd.AddCommand(reloadCmd)
+	// rootCmd.AddCommand(reloadCmd)
 }
 
 var reloadCmd = &cobra.Command{
 	Use:   "reload",
 	Short: "Hot-Reload frpc configuration",
 	RunE: func(cmd *cobra.Command, args []string) error {
-		cfg, _, _, err := config.ParseClientConfig(cfgFile)
+		cfg, _, _, err := config.ParseClientConfig()
 		if err != nil {
 			fmt.Println(err)
 			os.Exit(1)

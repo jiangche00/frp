@@ -31,14 +31,14 @@ import (
 )
 
 func init() {
-	rootCmd.AddCommand(statusCmd)
+	// rootCmd.AddCommand(statusCmd)
 }
 
 var statusCmd = &cobra.Command{
 	Use:   "status",
 	Short: "Overview of all proxies status",
 	RunE: func(cmd *cobra.Command, args []string) error {
-		cfg, _, _, err := config.ParseClientConfig(cfgFile)
+		cfg, _, _, err := config.ParseClientConfig()
 		if err != nil {
 			fmt.Println(err)
 			os.Exit(1)
