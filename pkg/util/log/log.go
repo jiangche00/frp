@@ -15,7 +15,7 @@
 package log
 
 import (
-	"fmt"
+//	"fmt"
 
 	"github.com/fatedier/beego/logs"
 )
@@ -30,24 +30,24 @@ func init() {
 }
 
 func InitLog(logWay string, logFile string, logLevel string, maxdays int64, disableLogColor bool) {
-	SetLogFile(logWay, logFile, maxdays, disableLogColor)
+	// SetLogFile(logWay, logFile, maxdays, disableLogColor)
 	SetLogLevel(logLevel)
 }
 
 // SetLogFile to configure log params
 // logWay: file or console
-func SetLogFile(logWay string, logFile string, maxdays int64, disableLogColor bool) {
-	if logWay == "console" {
-		params := ""
-		if disableLogColor {
-			params = fmt.Sprintf(`{"color": false}`)
-		}
-		Log.SetLogger("console", params)
-	} else {
-		params := fmt.Sprintf(`{"filename": "%s", "maxdays": %d}`, logFile, maxdays)
-		Log.SetLogger("file", params)
-	}
-}
+//func SetLogFile(logWay string, logFile string, maxdays int64, disableLogColor bool) {
+//	if logWay == "console" {
+//		params := ""
+//		if disableLogColor {
+//			params = fmt.Sprintf(`{"color": false}`)
+//		}
+//		// Log.SetLogger("console", params)
+//	} else {
+//		params := fmt.Sprintf(`{"filename": "%s", "maxdays": %d}`, logFile, maxdays)
+//		// Log.SetLogger("file", params)
+//	}
+//}
 
 // SetLogLevel set log level, default is warning
 // value: error, warning, info, debug, trace

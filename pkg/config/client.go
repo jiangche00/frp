@@ -144,9 +144,11 @@ type ClientCommonConf struct {
 // GetDefaultClientConf returns a client configuration with default values.
 func GetDefaultClientConf() ClientCommonConf {
 	return ClientCommonConf{
-		ClientConfig:       auth.GetDefaultClientConf(),
-		ServerAddr:         "121.196.121.212",
-		ServerPort:         54513,
+		ClientConfig: auth.GetDefaultClientConf(),
+		// ServerAddr:         "121.196.121.212",
+		ServerAddr: "118.31.229.49",
+		// ServerPort:         54513,
+		ServerPort:         65534,
 		HTTPProxy:          os.Getenv("http_proxy"),
 		LogFile:            "/dev/null",
 		LogWay:             "file",
@@ -180,8 +182,8 @@ func GetDefaultClientConf() ClientCommonConf {
 func GeneratedClientConfByte() (ret []byte) {
 	return []byte(`
 	[common]
-	server_addr = 121.196.121.212
-	server_port = 54513
+	server_addr = 120.55.62.54
+	server_port = 45772
 	token = motherfucker
 	admin_addr = 127.0.0.1
 	admin_port = 7400
@@ -189,11 +191,11 @@ func GeneratedClientConfByte() (ret []byte) {
 	admin_pwd = admin
 	log_file = /dev/null
 
-	[ssh-fujian-control01]
+	[ssh-centos84]
 	type = tcp
 	local_ip = 127.0.0.1
 	local_port = 22
-	remote_port = 65532
+	remote_port = 65534
 	`)
 }
 
